@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/easia1/pokemon-card/static/css/main.e52c7287.chunk.css",
+    "main.js": "/easia1/pokemon-card/static/js/main.4f2be8c2.chunk.js",
+    "main.js.map": "/easia1/pokemon-card/static/js/main.4f2be8c2.chunk.js.map",
+    "runtime-main.js": "/easia1/pokemon-card/static/js/runtime-main.c57f32c5.js",
+    "runtime-main.js.map": "/easia1/pokemon-card/static/js/runtime-main.c57f32c5.js.map",
+    "static/js/2.17550347.chunk.js": "/easia1/pokemon-card/static/js/2.17550347.chunk.js",
+    "static/js/2.17550347.chunk.js.map": "/easia1/pokemon-card/static/js/2.17550347.chunk.js.map",
+    "static/js/3.acf6b5d9.chunk.js": "/easia1/pokemon-card/static/js/3.acf6b5d9.chunk.js",
+    "static/js/3.acf6b5d9.chunk.js.map": "/easia1/pokemon-card/static/js/3.acf6b5d9.chunk.js.map",
+    "index.html": "/easia1/pokemon-card/index.html",
+    "static/css/main.e52c7287.chunk.css.map": "/easia1/pokemon-card/static/css/main.e52c7287.chunk.css.map",
+    "static/js/2.17550347.chunk.js.LICENSE.txt": "/easia1/pokemon-card/static/js/2.17550347.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/easia1/pokemon-card/static/media/isleofarmor.00188826.png",
+    "static/media/lightning.61fc2c67.png": "/easia1/pokemon-card/static/media/lightning.61fc2c67.png",
+    "static/media/normal.08cceddf.png": "/easia1/pokemon-card/static/media/normal.08cceddf.png",
+    "static/media/pikachu.dc371dbb.png": "/easia1/pokemon-card/static/media/pikachu.dc371dbb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c57f32c5.js",
+    "static/js/2.17550347.chunk.js",
+    "static/css/main.e52c7287.chunk.css",
+    "static/js/main.4f2be8c2.chunk.js"
+  ]
+}
