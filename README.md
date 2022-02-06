@@ -2,6 +2,8 @@
 
 This small project was my very first attempt to experiment with ReactJS. The card was completely designed and animated using vanilla CSS. The `useState` React hook was used for the HP.
 
+Live demo [here](https://easia1.github.io/pokemon-card/)
+
 # Screenshots
 <img width="1680" alt="Screen Shot 2022-02-07 at 2 45 47 AM" src="https://user-images.githubusercontent.com/85211112/152696941-c1d31e17-accf-472a-8b44-e9ab077ab7aa.png">
 
