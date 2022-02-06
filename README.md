@@ -1,7 +1,21 @@
-# Getting Started with Create React App
+# Pokémon Card using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This small project was my very first attempt to experiment with ReactJS. The card was completely designed and animated using vanilla CSS. The `useState` React hook was used for the HP.
 
+# Screenshots
+<img width="1680" alt="Screen Shot 2022-02-07 at 2 45 47 AM" src="https://user-images.githubusercontent.com/85211112/152696941-c1d31e17-accf-472a-8b44-e9ab077ab7aa.png">
+
+<img width="1680" alt="Screen Shot 2022-02-07 at 2 58 38 AM" src="https://user-images.githubusercontent.com/85211112/152697000-89c266ac-1cb5-48d7-a074-e5fdddd08e5d.png">
+
+Buttons 
+<img width="1680" alt="Screen Shot 2022-02-07 at 2 58 44 AM" src="https://user-images.githubusercontent.com/85211112/152696972-c46c2462-d914-470d-8e76-67a07932027b.png">
+
+Pikachu with 0 HP left
+<img width="1680" alt="Screen Shot 2022-02-07 at 2 58 53 AM" src="https://user-images.githubusercontent.com/85211112/152696984-dad09299-88eb-49a6-a390-6c44451cb436.png">
+
+
+
+<!--
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +82,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+-->
