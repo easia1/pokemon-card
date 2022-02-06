@@ -1,38 +1,345 @@
-.App {
-  text-align: center;
+/* Colors */
+/* Bright Yellow: #F7D346
+Light Yellow: #F8EC99 */
+
+/* --------------------------------- Globals -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #f3efd5;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ----------------------------- Card Container ----------------------------- */
+
+.card-container {
+    width: 60vmin;
+    height: calc(60vmin * 1.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(247, 211, 70);
+    background: linear-gradient(
+        140deg,
+        rgba(247, 211, 70, 1) 0%,
+        rgba(247, 142, 70, 1) 25%,
+        rgba(247, 211, 70, 1) 50%,
+        rgba(247, 142, 70, 1) 75%,
+        rgba(247, 211, 70, 1) 100%
+    );
+    border-radius: 3vmin;
+    border: 3vmin solid #f7d346;
+    transform: scale3d(0.86, 0.75, 1);
+    box-shadow: 1em 0em 4em -4em rgba(0, 0, 0, 0.9),
+        1em 2em 3.5em -2.5em rgba(0, 0, 0, 0.9);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: 0.4s ease;
+    animation: cardLay 2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.card-container:hover {
+    transform: rotate3d(0, 0, 0, 0deg) rotate(0deg);
+    box-shadow: 2em 4em 6em -2em rgba(0, 0, 0, 0.2),
+        1em 2em 3.5em -2.5em rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-container:hover .button-container {
+    opacity: 1;
+}
+
+@keyframes cardLay {
+    0% {
+        transform: scale3d(0.86, 0.75, 1) rotate3d(90, 90, 90, 90deg)
+            translate(100%, 100%) scale(0.8);
+        box-shadow: 1em 0em 4em -4em rgba(0, 0, 0, 0.9),
+            1em 2em 3.5em -2.5em rgba(0, 0, 0, 0.9);
+    }
+    30% {
+        transform: rotate3d(0, 0, 0, 0deg) rotate(0deg) scale(1);
+        box-shadow: 2em 4em 6em -2em rgba(0, 0, 0, 0.2),
+            1em 2em 3.5em -2.5em rgba(0, 0, 0, 0.1);
+    }
+    60% {
+        transform: rotate3d(0, 0, 0, 0deg) rotate(0deg);
+        box-shadow: 2em 4em 6em -2em rgba(0, 0, 0, 0.2),
+            1em 2em 3.5em -2.5em rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        transform: scale3d(0.86, 0.75, 1);
+        box-shadow: 1em 0em 4em -4em rgba(0, 0, 0, 0.9),
+            1em 2em 3.5em -2.5em rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* ------------------------------- Card Header ------------------------------ */
+
+h1 {
+    font-size: 3vmin;
+    margin-left: 12%;
+}
+
+.card-type {
+    position: fixed;
+    top: 1.6%;
+    left: -2%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(207, 207, 207, 1) 15%,
+        rgba(231, 231, 231, 1) 30%,
+        rgba(231, 231, 231, 1) 70%,
+        rgba(180, 180, 180, 1) 85%,
+        rgba(142, 142, 142, 1) 100%
+    );
+    box-shadow: 0.2em 0.3em 0.4em 0.1em rgba(126, 63, 63, 0.3);
+    border-radius: 50px;
+    height: 2.7vmin;
+    width: 7vmin;
+    font-size: 2vmin;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+    color: rgb(44, 44, 44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1vmin 2vmin 1vmin 2vmin;
+}
+
+.hp-label {
+    font-size: 2vmin;
+}
+
+.hp-number {
+    font-size: 3vmin;
+    font-weight: bolder;
+}
+
+.type-icon {
+    height: 3vmin;
+    margin-bottom: -0.3vmin;
+    margin-left: 0.5vmin;
+}
+
+/* ------------------------------- Card Image ------------------------------- */
+
+.img-container {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+            0deg,
+            rgba(36, 29, 1, 0.5),
+            rgba(46, 45, 2, 0.3)
+        ),
+        url('./isleofarmor.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(50px);
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.pkmn-jp-name-container {
+    height: max-content;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -7vmin;
+    float: left;
+}
+
+.pkmn-jp-name {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 8vmin;
+    font-weight: 900;
+    font-style: italic;
+    fill: none;
+    stroke: white;
+    stroke-width: 0.15vmin;
+    -webkit-text-fill-color: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.pkmn-img {
+    width: 80%;
+    height: auto;
+    margin-top: -5%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.4s ease;
+}
+
+.bw {
+    filter: grayscale(1);
+}
+
+.pkmn-desc {
+    position: absolute;
+    bottom: -3%;
+    left: -2.5%;
+    width: 105%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(207, 207, 207, 1) 15%,
+        rgba(231, 231, 231, 1) 30%,
+        rgba(231, 231, 231, 1) 70%,
+        rgba(180, 180, 180, 1) 85%,
+        rgba(142, 142, 142, 1) 100%
+    );
+    height: 2.5vmin;
+    text-align: center;
+    color: rgb(95, 95, 95);
+    font-size: 1.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vmin 2vmin 2vmin 2vmin;
+    box-shadow: 0.1em 0.2em 0.3em 0.1em rgba(77, 77, 77, 0.2);
+}
+
+/* ------------------------------ Card Content ------------------------------ */
+
+.card-content {
+    padding: 1vmin 2vmin 1vmin 2vmin;
+}
+
+.move-header {
+    margin-top: 4vmin;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+    grid-template-areas: 'icon move number';
+}
+
+.move-type-icon {
+    height: 2.5vmin;
+    margin-bottom: -0.3vmin;
+    margin-right: 0.5vmin;
+}
+
+.move-title {
+    font-size: 2.5vmin;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed',
+        'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed',
+        'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold',
+        'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica',
+        'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif;
+    font-stretch: condensed;
+}
+
+.move-number {
+    font-size: 2.5vmin;
+    font-weight: bolder;
+    text-align: center;
+    float: right;
+}
+
+.move-info {
+    font-size: 1.8vmin;
+    margin-top: 1vmin;
+}
+
+.button-container {
+    width: 150%;
+    height: 4vmin;
+    position: absolute;
+    bottom: 5%;
+    left: -25%;
+    opacity: 0;
+    transition: 0.2s ease;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-button {
+    border: none;
+    background: none;
+    width: 30%;
+    height: 100%;
+    font-size: 2vmin;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease;
+    background: linear-gradient(
+        to bottom,
+        rgba(161, 132, 0, 0.3),
+        rgba(161, 132, 0, 0.9)
+    );
+    border-radius: 2vmin;
+    border: 0.3vmin solid rgba(245, 245, 245, 0.753);
+}
+
+.card-button:hover {
+    background-color: rgba(245, 245, 245, 0.5);
+}
+
+.card-button:active {
+    background-color: rgba(77, 77, 77, 0.5);
+}
+
+/* --------------------------------- Banner --------------------------------- */
+
+.banner {
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 0;
+    height: 7vmin;
+    font-size: 4vmin;
+    font-weight: bolder;
+    font-style: oblique;
+    color: rgba(0, 0, 0, 0.8);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(207, 207, 207, 1) 15%,
+        rgba(231, 231, 231, 1) 30%,
+        rgba(231, 231, 231, 1) 70%,
+        rgba(180, 180, 180, 1) 85%,
+        rgba(142, 142, 142, 0.5) 100%
+    );
+    padding: 2vmin;
+    display: flex;
+    align-items: center;
+    border-style: outset;
+    border-color: grey;
+    border-width: 0.5vmin 0.5vmin 0.5vmin 0vmin;
+    border-radius: 0vmin 5vmin 5vmin 0;
+}
+
+.banner-closed {
+    left: -100%;
 }
